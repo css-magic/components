@@ -1,0 +1,76 @@
+@import "mixins";
+
+.running-dots{
+  .circle_container{
+    position: relative;
+    margin: 0 auto;
+    height: 120px;
+    width: 120px;
+  }
+
+  .circle_skin{
+    background: #4183C4;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    @include animation(roll 1.2s ease infinite);
+    @include border-radius(15px);
+  }
+
+  .circle1{
+    left: 0;
+    top: 47px;
+    @include delay(0.45s);
+  }
+
+  .circle2{
+    left: 13px;
+    top: 13px;
+    @include delay(0.6s);
+  }
+
+  .circle3{
+    top: 0;
+    left: 47px;
+    @include delay(0.75s);
+  }
+
+  .circle4{
+    right: 13px;
+    top: 13px;
+    @include delay(0.9s);
+  }
+
+  .circle5{
+    right: 0;
+    top: 47px;
+    @include delay(1.05s);
+  }
+
+  .circle6{
+    right: 13px;
+    bottom: 13px;
+    @include delay(1.2s);
+  }
+
+  .circle7{
+    left: 47px;
+    bottom: 0;
+    @include delay(1.35s);
+  }
+
+  .circle8{
+    left: 13px;
+    bottom: 13px;
+    @include delay(1.5s);
+  }
+}
+
+@include keyframes(roll){
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.3);
+  }
+}

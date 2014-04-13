@@ -1,0 +1,84 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-radius-custom($top, $right, $bottom, $left) {
+  -webkit-border-radius: $top $right $bottom $left;
+  -moz-border-radius: $top $right $bottom $left;
+  border-radius: $top $right $bottom $left;
+}
+
+@mixin animation($properties) {
+  -webkit-animation: $properties;
+  -moz-animation: $properties;
+  -ms-animation: $properties;
+  -o-animation: $properties;
+  animation: $properties;
+}
+
+@mixin delay($time){
+  -webkit-animation-delay: $time;
+  -moz-animation-delay: $time;
+  -o-animation-delay: $time;
+  animation-delay: $time;
+}
+
+@mixin border($size, $type, $top, $right, $bottom, $left) {
+  border-top: $size $type $top;
+  border-right: $size $type $right;
+  border-bottom: $size $type $bottom;
+  border-left: $size $type $left;
+}
+
+@mixin box-shadow($properties) {
+  -webkit-box-shadow: $properties;
+  -moz-box-shadow: $properties;
+  box-shadow: $properties;
+}
+
+@mixin transform-origin($properties){
+  -webkit-transform-origin: $properties;
+  -moz-transform-origin: $properties;
+  -o-transform-origin: $properties;
+  transform-origin: $properties;
+}
+
+//
+//@mixin full-animation ($delay, $duration, $animation) {
+//  -webkit-animation-delay: $delay;
+//  -webkit-animation-duration: $duration;
+//  -webkit-animation-name: $animation;
+//  -webkit-animation-fill-mode: forwards;
+//
+//  -moz-animation-delay: $delay;
+//  -moz-animation-duration: $duration;
+//  -moz-animation-name: $animation;
+//  -moz-animation-fill-mode: forwards;
+//
+//  -o-animation-delay: $delay;
+//  -o-animation-duration: $duration;
+//  -o-animation-name: $animation;
+//  -o-animation-fill-mode: forwards;
+//
+//  animation-delay: $delay;
+//  animation-duration: $duration;
+//  animation-name: $animation;
+//  animation-fill-mode: forwards;
+//}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

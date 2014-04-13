@@ -1,0 +1,24 @@
+@import "mixins";
+
+.line-runner{
+  .progress-bar {
+    background: #1B5278;
+    @include box-shadow(0 0 6px 4px #1B5278);
+    margin: 0 auto;
+    height: 8px;
+    width: 220px;
+  }
+  .line {
+    @include animation(line_run 2s ease-in-out infinite alternate);
+    background: #fff;
+    @include box-shadow(0 0 6px 4px #fff);
+    height: 100%;
+    width: 20px;
+  }
+}
+
+@include keyframes(line_run){
+  to {
+    margin-left: 90%;
+  }
+}
